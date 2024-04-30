@@ -7,7 +7,6 @@ Description: EvenSlate is a theme for events schools website which easy to use, 
 Tags: accessibility-ready, one-column, two-columns, custom-menu, featured-images, microformats, sticky-post, threaded-comments, responsive, mobile-first
 Version: 0.1
 Requires at least: 5.2
-Tested up to: 6.5
 Requires PHP: 7.0
 License: GNU General Public License v3 or Later
 License URI: https://www.gnu.org/licenses/gpl.html
@@ -23,9 +22,136 @@ EventSlate is distributed under the terms of the GNU GPL
 }
 
 :root {
-    --color-primary: ;
+    --color-blue: #0092CA;
+    --color-dark: #222831;
+    --color-dark-soft: #393E46;
+    --color-grey: #EEEEEE;
+    --font-title-page-size: 30px;
+    --font-title-size: 24px;
+    --font-paragrahp-size: 16px;
 }
 
 body {
     font-family: Poppins, sans-serif;
+}
+
+h1 {
+    font-size: var(--font-title-size);
+}
+
+p {
+    font-size: var(--font-paragrahp-size);
+}
+
+.hidden-desktop {
+    display: none;
+}
+
+/* === Navbar === */
+/* Title Page */
+#site-title > h1 > a, #site-title > a {
+    text-decoration: none;
+    font-size: var(--font-title-page-size);
+    color: white;
+}
+
+#header { 
+    background-color: var(--color-dark);
+    padding: 8px 16px;
+
+}
+
+input[type=search] {
+    padding: 4px;
+}
+
+.search-submit {
+    border: none;
+    padding: 4px 8px;
+    background-color: white;
+}
+
+#menu-mainmenu {
+    list-style: none;
+}
+
+#menu-mainmenu > li > a {
+    color: white;
+    text-decoration: none;
+    padding: 4px 8px;
+}
+
+#menu-mainmenu > li > a:hover {
+    background-color: var(--color-dark-soft);
+    color: var(--color-grey);
+}
+
+#search {
+    padding: 8px 0;
+}
+
+#branding {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#menu-mobile {
+    height: fit-content;
+}
+
+.hidden-mobile {
+    display: none;
+}
+/* === End Navbar === */
+
+
+/* === Container === */
+#container {
+    padding: 16px;
+}
+/* === EndContainer === */
+
+/* === Footer */
+#footer {
+    text-align: center;
+}
+/* === End Footer === */
+
+/* === For Desktop View (min: 700px) === */
+@media only screen and (min-width: 700px) {
+    .hidden-desktop {
+        display: none;
+    }
+
+    .hidden-mobile {
+        display: block;
+    }
+
+    /* === Header === */
+    #header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #branding {
+        width: fit-content;
+    }
+
+    #search-desktop {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #menu {
+        display: flex;
+        align-items: center;
+    }
+
+    #menu-mainmenu {
+        display: flex;
+        gap: 8px;
+    }
+    /* === End Header === */
 }
