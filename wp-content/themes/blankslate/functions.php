@@ -28,8 +28,10 @@ add_user_meta( $user_id, 'eventslate_notice_dismissed_10', 'true', true );
 }
 add_action( 'wp_enqueue_scripts', 'eventslate_enqueue' );
 function eventslate_enqueue() {
+wp_register_script('customScript', get_theme_file_uri() . '/main.js');
 wp_enqueue_style( 'eventslate-style', get_stylesheet_uri() );
 wp_enqueue_script( 'jquery' );
+wp_enqueue_script( 'customScript' );
 }
 add_action( 'wp_footer', 'eventslate_footer' );
 function eventslate_footer() {

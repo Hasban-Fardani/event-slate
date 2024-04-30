@@ -25,14 +25,25 @@ EventSlate is distributed under the terms of the GNU GPL
     --color-blue: #0092CA;
     --color-dark: #222831;
     --color-dark-soft: #393E46;
-    --color-grey: #EEEEEE;
+    --color-grey: #c7c7c7;
+    --color-yellow: #F2DF3A;
     --font-title-page-size: 30px;
     --font-title-size: 24px;
     --font-paragrahp-size: 16px;
 }
 
-body {
+body, #wrapper {
     font-family: Poppins, sans-serif;
+    min-height: calc(100vh - 32px);
+}
+
+body {
+    overflow-x: hidden;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
 }
 
 h1 {
@@ -43,8 +54,21 @@ p {
     font-size: var(--font-paragrahp-size);
 }
 
+a {
+    text-decoration: none;
+    color: var(--color-blue);
+}
+
+a:hover {
+    color: yellow;
+}
+
 .hidden-desktop {
-    display: none;
+    display: blcok;
+}
+
+.font-grey {
+    color: var(--color-grey) !important;
 }
 
 /* === Navbar === */
@@ -56,7 +80,7 @@ p {
 }
 
 #header { 
-    background-color: var(--color-dark);
+    background-color: var(--color-blue);
     padding: 8px 16px;
 
 }
@@ -98,10 +122,21 @@ input[type=search] {
 
 #menu-mobile {
     height: fit-content;
+    background-color: white;
+    border: none;
+}
+
+#menu-mobile:hover {
+    background-color: var(--color-dark-soft);
+    color: white;
 }
 
 .hidden-mobile {
     display: none;
+}
+
+.show {
+    display: block !important;
 }
 /* === End Navbar === */
 
@@ -109,17 +144,59 @@ input[type=search] {
 /* === Container === */
 #container {
     padding: 16px;
+    flex: 1;
 }
-/* === EndContainer === */
 
-/* === Footer */
+/* === content === */
+.wp-post-image {
+    width: 100%;
+    max-height: 400px;
+    height: auto;
+    object-fit: cover;
+}
+/* === end content === */
+
+/* === Footer === */
 #footer {
+    padding: 8px 0;
+    background-color: var(--color-dark);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#footer > * {
+    padding: 0 8px;
+}
+
+#footer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#copyright {
+    margin-top: 16px;
     text-align: center;
+}
+
+#socials {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    color: white;
 }
 /* === End Footer === */
 
-/* === For Desktop View (min: 700px) === */
-@media only screen and (min-width: 700px) {
+/* === For Desktop View (min: 850px) === */
+@media only screen and (min-width: 850px) {
     .hidden-desktop {
         display: none;
     }
@@ -154,4 +231,28 @@ input[type=search] {
         gap: 8px;
     }
     /* === End Header === */
+
+    /* === Footer === */
+    #footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .info-title {
+        text-align: start;
+    }
+    
+    #footer-info {
+        width: 95%;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 8px;
+    }
+
+    #address {
+        max-width: 400px;
+    }
+    /* === End Footer === */
 }
