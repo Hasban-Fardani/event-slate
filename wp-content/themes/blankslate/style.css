@@ -1,0 +1,31 @@
+/*
+Theme Name: EventSlate
+Theme URI: https://github.com/Hasban-Fardani/event-slate
+Author: Hasban Fardani
+Author URI: https://hasban-fardani.github.io
+Description: EvenSlate is a theme for events schools website which easy to use, edit, and mobile first design
+Tags: accessibility-ready, one-column, two-columns, custom-menu, featured-images, microformats, sticky-post, threaded-comments, responsive, mobile-first
+Version: 0.1
+Requires at least: 5.2
+Tested up to: 6.5
+Requires PHP: 7.0
+License: GNU General Public License v3 or Later
+License URI: https://www.gnu.org/licenses/gpl.html
+Text Domain: EventSlate
+
+EventSlate WordPress Theme 2024-now
+EventSlate is distributed under the terms of the GNU GPL
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-primary: ;
+}
+
+body {
+    font-family: Poppins, sans-serif;
+}
