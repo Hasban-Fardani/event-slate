@@ -1,0 +1,2 @@
+
+{{WordPress has invalidated the password for your account <b>%%SUCURI.ResetPassword.UserName%%</b> at <a target="_blank" href="http://%%SUCURI.ResetPassword.Website%%" rel="noopener">%%SUCURI.ResetPassword.Website%%</a>. The change has been requested by one of the admins in this website for security reasons. You can set a new password at &mdash; <span style="font-family:Menlo, Monaco, monospace, serif;font-weight:700"><a target="_blank" href="%%%SUCURI.ResetPassword.ResetURL%%%" rel="noopener">%%%SUCURI.ResetPassword.ResetURL%%%</a></span> &mdash;.}}

@@ -148,18 +148,47 @@ input[type=search] {
 }
 
 /* === content === */
+.post {
+    margin-top: 16px;
+    padding-bottom: 8px;
+    border-bottom: solid var(--color-grey) 1px;
+}
+
+.post:last-child {
+    border-bottom: none;
+}
+
+.entry-content {
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
 .wp-post-image {
     width: 100%;
-    max-height: 400px;
+    max-height: 300px;
     height: auto;
     object-fit: cover;
 }
+
+.comment-form-comment {
+    display: flex;
+    flex-direction: column;
+}
+
+input[value="Post Comment"]{
+    padding: 16px 8px;
+    border: none;
+    margin-top: 8px;
+}
+
 /* === end content === */
 
 /* === Footer === */
 #footer {
-    padding: 8px 0;
-    background-color: var(--color-dark);
+    padding-top: 8px;
+    background-color: var(--color-dark-soft);
     color: white;
     display: flex;
     flex-direction: column;
@@ -178,7 +207,12 @@ input[type=search] {
 
 #copyright {
     margin-top: 16px;
-    text-align: center;
+    height: 32px;
+    width: 100%;
+    background-color: var(--color-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #socials {
@@ -238,6 +272,10 @@ input[type=search] {
         flex-direction: column;
         justify-content: center;
         text-align: center;
+    }
+
+    #address > h3:first-child {
+        margin-left: 16px;
     }
 
     .info-title {
